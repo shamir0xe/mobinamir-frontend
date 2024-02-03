@@ -1,0 +1,24 @@
+.Container {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.9;
+    top: 0;
+    position: fixed;
+    z-index: var(--layer-important);
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.None {
+    display: none;
+}
+
+.Container > img {
+    width: 50vh;
+    height: 50vh;
+    margin: 50px auto;
+    display: block;
+}

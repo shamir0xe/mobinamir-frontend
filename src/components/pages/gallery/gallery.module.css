@@ -1,0 +1,53 @@
+.Section {
+    z-index: 1;
+}
+
+.Container {
+    min-height: calc(100vh - var(--topbar-h));
+}
+
+.Background {
+    transform: translateZ(var(--parallax-layer-0)) scale(var(--parallax-scale-0));
+    clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+    -webkit-clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+}
+
+.ImageBackground {
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* .ImageBackground { */
+/* height: 100%; */
+/* position: absolute; */
+/* background-size: cover; */
+/* left: 50%; */
+/* top: 50%; */
+/* transform: translate(-50%, -50%, -1px) scale(2); */
+/* z-index: -1; */
+/* } */
+
+.Navigation {
+    width: 100%;
+    height: 80%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+}
+
+.Image {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.Blur {
+    filter: blur(1px);
+    cursor: pointer;
+}

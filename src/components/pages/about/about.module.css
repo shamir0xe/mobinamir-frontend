@@ -1,0 +1,114 @@
+.Section {
+    z-index: -1;
+}
+
+.Background {
+    transform: translateZ(var(--parallax-layer-2)) scale(var(--parallax-scale-2));
+    background-image: url("/assets/backgrounds/about.webp");
+    background-size: cover;
+    background-position: bottom right;
+}
+
+.BackgroundImg {
+    position: relative;
+    width: 100%;
+}
+
+.Background > img:not(:first-of-type) {
+    /* top: -10px; */
+}
+
+/* .BackgroundImgPrim {
+    width: calc((100vh - var(--topbar-h)) * var(--slope));
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+} */
+
+.Text {
+    margin-top: var(--topbar-h);
+    position: relative;
+    width: 100%;
+    color: var(--text-color);
+    direction: ltr;
+    margin-bottom: 50px;
+}
+
+p {
+    text-align: justify;
+    text-justify: inter-word;
+    padding: 0 5%;
+}
+
+p > h3 {
+    text-align: center;
+}
+
+.CardsHolder {
+    width: 100%;
+    position: relative;
+    direction: ltr;
+    color: var(--text-color);
+}
+
+.Card {
+    position: relative;
+    width: 100%;
+    min-height: 40vh;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 50px;
+}
+
+.CardTextWrapper {
+    width: 60%;
+    height: 100%;
+    display: inline-block;
+}
+
+.CardImageWrapper {
+    width: 40%;
+    display: inline-block;
+    position: relative;
+    align-self: flex-start;
+    top: 0;
+    right: 0;
+    /* top: calc(var(--topbar-h) * 0.5); */
+}
+
+.CardImageWrapper > img {
+    width: 80%;
+    border-radius: 100vw;
+    margin: 0 auto;
+    display: block;
+}
+
+/* .StickTop {
+    animation: goToCenter 2s ease-in forwards;
+} */
+
+/* @keyframes goToCenter {
+    100% {
+        transform: translateY(100%);
+    }
+} */
+
+/* .StickBottom {
+    align-self: flex-end;
+    top: 0;
+    bottom: 0;
+} */
+
+@media screen and (max-width: 666px) {
+    .Card {
+        margin-bottom: 10px;
+    }
+    .CardTextWrapper {
+        width: 60%;
+    }
+    .CardImageWrapper {
+        width: 40%;
+    }
+}

@@ -1,0 +1,141 @@
+@font-face {
+    font-family: "Tsukimi";
+    src: url("../assets/fonts/TsukimiRounded-Light.ttf") format("truetype");
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Tsukimi";
+    src: url("../assets/fonts/TsukimiRounded-Regular.ttf") format("truetype");
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Tsukimi";
+    src: url("../assets/fonts/TsukimiRounded-Medium.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Tsukimi";
+    src: url("../assets/fonts/TsukimiRounded-SemiBold.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Tsukimi";
+    src: url("../assets/fonts/TsukimiRounded-Bold.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "IranNastaliq";
+    src: url("../assets/fonts/IranNastaliq.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Suls";
+    src: url("../assets/fonts/Suls.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Badkhat";
+    src: url("../assets/fonts/badkhat.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Lalezar";
+    src: url("../assets/fonts/lalezar.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+.Canvas {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.Container {
+    height: 100vh;
+    max-width: calc((100vh - var(--topbar-h)) * var(--slope));
+    margin: 0 auto;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 2px;
+}
+
+.Container > section:not(:last-child) {
+    position: relative;
+    margin: 0 auto;
+    min-height: 110vh;
+    transform-style: preserve-3d;
+}
+
+.Container > section > div:first-of-type {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+/* .Container > section:nth-child(even) > div:first-of-type {
+    transform: translateZ(-1px) scale(1.5);
+}
+
+.Container > section:nth-child(odd) > div:first-of-type {
+    transform: translateZ(-3px) scale(3);
+} */
+
+.Container > section > div:nth-of-type(2) {
+    width: 100%;
+    position: relative;
+}
+
+
+:root {
+    --topbar-h: var(--size-10);
+    --footer-h: var(--size-9);
+    --background-color: #FCE7DE;
+    --topbar-bg: var(--choco-2);
+    --topbar-bg-hover: var(--choco-1);
+    --topbar-color: var(--gray-8);
+    --bg-scale: calc(5 / 7);
+    --slope: calc(1920 / 1080);
+    --text-color: var(--gray-11);
+    --parallax-layer-0: -1px;
+    --parallax-layer-1: -2px;
+    --parallax-layer-2: -4px;
+    --parallax-scale-0: 1.5;
+    --parallax-scale-1: 2;
+    --parallax-scale-2: 3;
+}
+
+body {
+    background-color: var(--background-color);
+    direction: ltr;
+    font-family: "Lalezar", "Tsukimi", -apple-system, BlinkMacSystemFont, "Segoe UI",
+        "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+        "Helvetica Neue", sans-serif;
+}
+
+p {
+    text-indent: var(--size-3);
+    text-align: justify;
+}

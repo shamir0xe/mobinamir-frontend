@@ -1,0 +1,51 @@
+
+.Section {
+    z-index: 1;
+    position: relative;
+    height: 55vh;
+    display: flex;
+    align-items: center;
+}
+
+.Background {
+    background-color: var(--gray-9);
+    transform: translateZ(var(--parallax-layer-0)) scale(var(--parallax-scale-0));
+    clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 100%);
+}
+
+.Navigator {
+    width: 90%;
+    margin: 50px auto;
+    height: var(--footer-h);
+    text-align: center;
+}
+
+.LogoWrapper {
+    display: inline-block;
+    height: 100%;
+    width: var(--footer-h);
+    margin-right: 10px;
+    text-align: center;
+}
+
+.Logo {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.Container > p {
+    color: var(--gray-0);
+    text-align: center;
+}
+
+@media screen and (max-width: 666px) {
+    .Navigator {
+        height: var(--size-8);
+    }
+    .LogoWrapper {
+        width: var(--size-8);
+    }
+}
+ 

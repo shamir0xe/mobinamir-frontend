@@ -1,0 +1,129 @@
+.Section {
+  z-index: 3;
+}
+
+.Container {
+  min-height: calc(100vh - var(--topbar-h));
+}
+
+.Background {
+  transform: translateZ(var(--parallax-layer-0));
+  /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%); */
+  /* -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%); */
+}
+
+.Background {
+  transform: translateZ(-1px) scale(1.5);
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.Background > img {
+  height: 100%;
+  width: 100%;
+  max-width: calc(100vh * var(--bg-scale));
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.Text {
+  position: relative;
+  width: 100%;
+  color: var(--text-color);
+  direction: rtl;
+  margin-bottom: 25px;
+}
+
+.Title {
+  margin-top: var(--topbar-h);
+  padding-top: 12vh;
+}
+
+.Title > p {
+  font-family: "Suls";
+  font-size: var(--size-8);
+  color: #EF7D82;
+}
+
+.Poet {
+  margin-top: 75px;
+}
+
+.Poet > p {
+  font-family: "IranNastaliq";
+  font-size: var(--size-8);
+}
+
+.Location {
+  margin-top: 50px;
+}
+
+p {
+  text-align: center;
+  text-justify: distribute;
+  padding: 0 5% 0 5.5%;
+  font-family: "Badkhat";
+  font-size: 33px;
+  color: var(--gray-7);
+}
+
+.RedButtonMotion {
+  mix-blend-mode: lighten;
+  z-index: var(--layer-3);
+}
+
+.Hidden {
+  visibility: hidden;
+  z-index: var(--layer-4);
+}
+
+.TextImage {
+  z-index: var(--layer-2);
+}
+
+.Motion {
+  visibility: visible;
+  animation: Beeping 0.5s forwards;
+}
+
+@keyframes Beeping {
+  to {
+    mix-blend-mode: color-dodge;
+  }
+}
+
+.MotionImage {
+  width: 100%;
+  position: relative;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+  mix-blend-mode: darken;
+}
+
+.FlowerTop {
+  position: absolute;
+  width: 80%;
+  top: 0;
+  left: max(0px, calc((100% - 100vh * var(--bg-scale)) * 0.5) + 10px);
+  max-width: calc(100vh * var(--bg-scale) * 0.8);
+  mix-blend-mode: multiply;
+}
+
+.FlowerTop > img,
+.FlowerBot > img {
+  width: 100%;
+}
+
+.FlowerBot {
+  position: absolute;
+  width: 80%;
+  bottom: 0;
+  right: max(0px, calc((100% - 100vh * var(--bg-scale)) * 0.5));
+  max-width: calc(100vh * var(--bg-scale) * 0.8);
+  mix-blend-mode: multiply;
+}

@@ -1,0 +1,156 @@
+.Section {
+  z-index: 2;
+}
+
+.Container {
+  min-height: calc(100vh - var(--topbar-h));
+  height: 100%;
+  background-color: var(--choco-0);
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.Background {
+  transform: translateZ(var(--parallax-layer-0));
+  /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%); */
+  /* -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%); */
+}
+
+.Background {
+  transform: translateZ(-1px) scale(1.5);
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: var(--background-color);
+}
+
+.Map {
+  padding-top: 50px;
+  width: 80%;
+  height: 80vh;
+  left: 50%;
+  max-width: calc(100vh * var(--bg-scale) - 100px);
+  max-height: 50vh;
+  transform: translateX(-50%);
+}
+
+.Background > img {
+  height: 100%;
+  width: 100%;
+  max-width: calc(100vh * var(--bg-scale));
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.CatsWrapper {
+  width: 100%;
+  max-width: calc(100vh * var(--bg-scale));
+  left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+  padding-top: 50px;
+}
+
+.CatsWrapper > img {
+  position: relative;
+  width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.ParagraphWrapper {
+  width: 100%;
+  max-width: calc(100vh * var(--bg-scale));
+  left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+}
+
+.ParagraphWrapper > p {
+  text-align: center;
+}
+
+.Text {
+  margin-top: var(--topbar-h);
+  position: relative;
+  width: 100%;
+  color: var(--text-color);
+  direction: rtl;
+  margin-bottom: 50px;
+}
+
+.Title {
+  padding-top: 15vh;
+  font-size: var(--size-9);
+}
+
+.Poet {
+  padding-top: 5vh;
+  font-size: 20px;
+}
+
+p {
+  text-align: center;
+  text-justify: distribute;
+  padding: 0 5% 0 5.5%;
+}
+
+.RedButtonMotion {
+  mix-blend-mode: lighten;
+  z-index: var(--layer-3);
+}
+
+.Hidden {
+  visibility: hidden;
+  z-index: var(--layer-4);
+}
+
+.TextImage {
+  z-index: var(--layer-2);
+}
+
+.Motion {
+  visibility: visible;
+  animation: Beeping 0.5s forwards;
+}
+
+@keyframes Beeping {
+  to {
+    mix-blend-mode: color-dodge;
+  }
+}
+
+.MotionImage {
+  width: 100%;
+  position: relative;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+  mix-blend-mode: darken;
+}
+
+.FlowerTop {
+  position: absolute;
+  width: 80%;
+  top: 0;
+  left: max(0px, calc((100% - 100vh * var(--bg-scale)) * 0.5));
+  max-width: calc(100vh * var(--bg-scale) * 0.8);
+  mix-blend-mode: multiply;
+}
+
+.FlowerTop > img,
+.FlowerBot > img {
+  width: 100%;
+}
+
+.FlowerBot {
+  position: absolute;
+  width: 80%;
+  bottom: 0;
+  right: max(0px, calc((100% - 100vh * var(--bg-scale)) * 0.5));
+  max-width: calc(100vh * var(--bg-scale) * 0.8);
+  mix-blend-mode: multiply;
+}

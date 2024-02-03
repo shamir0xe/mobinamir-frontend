@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+@import "../node_modules/open-props/open-props.min.css";
+/* @import "../node_modules/open-props/masks/edges"; */
+@import "../node_modules/open-props/src/props.masks.edges.css";
+@import "../node_modules/open-props/masks.edges.min.css";
+/* @import "../node_modules/open-props/normalize.min.css"; */
+/* @import "../node_modules/open-props/buttons.min.css"; */

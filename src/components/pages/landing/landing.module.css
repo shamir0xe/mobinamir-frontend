@@ -111,7 +111,6 @@ p {
   top: 0;
   left: max(0px, calc((100% - 100vh * var(--bg-scale)) * 0.5) + 10px);
   max-width: calc(100vh * var(--bg-scale) * 0.8);
-  mix-blend-mode: multiply;
 }
 
 .FlowerTop > img,
@@ -125,5 +124,4 @@ p {
   bottom: 0;
   right: max(0px, calc((100% - 100vh * var(--bg-scale)) * 0.5));
   max-width: calc(100vh * var(--bg-scale) * 0.8);
-  mix-blend-mode: multiply;
 }

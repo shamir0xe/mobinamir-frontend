@@ -5,9 +5,9 @@ const contents = {
     redButton: imgPack("logos/button.png", "button"),
     intro: imgPack("backgrounds/intro.webp", "intro"),
     flowers: {
-      upleft: imgPack("backgrounds/flower-upleft.webp", "flower-upleft"),
+      upleft: imgPack("backgrounds/flower-upleft.png", "flower-upleft"),
       downright: imgPack(
-        "backgrounds/flower-downright.webp",
+        "backgrounds/flower-downright.png",
         "flower-downright",
       ),
     },

@@ -124,7 +124,7 @@ const Map = (props: MapProps) => {
             width={"100%"}
             height={"100%"}
             allowFullScreen={true}
-            loading="lazy"
+            loading="eager"
             referrerPolicy="no-referrer-when-downgrade"
           />
         </div>

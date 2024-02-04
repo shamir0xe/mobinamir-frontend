@@ -4,10 +4,7 @@
 
 .Container {
   min-height: calc(100vh - var(--topbar-h));
-}
-
-.Background {
-  transform: translateZ(var(--parallax-layer-0));
+  background-color: transparent;
 }
 
 .Background {

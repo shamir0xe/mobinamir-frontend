@@ -8,8 +8,6 @@
 
 .Background {
   transform: translateZ(var(--parallax-layer-0));
-  /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%); */
-  /* -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%); */
 }
 
 .Background {
@@ -39,13 +37,14 @@
 
 .Title {
   margin-top: var(--topbar-h);
-  padding-top: 12vh;
+  padding-top: var(--size-10);
 }
 
 .Title > p {
   font-family: "Suls";
   font-size: var(--size-8);
-  color: #EF7D82;
+  color: #ef7d82;
+  line-height: var(--size-9);
 }
 
 .Poet {
@@ -66,43 +65,8 @@ p {
   text-justify: distribute;
   padding: 0 5% 0 5.5%;
   font-family: "Badkhat";
-  font-size: 33px;
+  font-size: var(--size-7);
   color: var(--gray-7);
-}
-
-.RedButtonMotion {
-  mix-blend-mode: lighten;
-  z-index: var(--layer-3);
-}
-
-.Hidden {
-  visibility: hidden;
-  z-index: var(--layer-4);
-}
-
-.TextImage {
-  z-index: var(--layer-2);
-}
-
-.Motion {
-  visibility: visible;
-  animation: Beeping 0.5s forwards;
-}
-
-@keyframes Beeping {
-  to {
-    mix-blend-mode: color-dodge;
-  }
-}
-
-.MotionImage {
-  width: 100%;
-  position: relative;
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  overflow: hidden;
-  mix-blend-mode: darken;
 }
 
 .FlowerTop {
@@ -113,15 +77,36 @@ p {
   max-width: calc(100vh * var(--bg-scale) * 0.8);
 }
 
-.FlowerTop > img,
-.FlowerBot > img {
-  width: 100%;
-}
-
 .FlowerBot {
   position: absolute;
   width: 80%;
   bottom: 0;
   right: max(0px, calc((100% - 100vh * var(--bg-scale)) * 0.5));
   max-width: calc(100vh * var(--bg-scale) * 0.8);
+}
+
+.FlowerTop > img,
+.FlowerBot > img {
+  width: 100%;
+}
+
+@media screen and (max-width: 666px) {
+  .Title {
+    padding-top: var(--size-10);
+  }
+
+  .Title > p {
+    font-size: var(--size-8);
+    line-height: var(--size-8);
+  }
+
+  .Poet {
+    padding: var(--size-2) 0;
+    margin-top: 0;
+  }
+
+  .Poet > p {
+    font-family: "IranNastaliq";
+    font-size: var(--size-8);
+  }
 }

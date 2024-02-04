@@ -24,14 +24,51 @@
   background-color: var(--background-color);
 }
 
-.Map {
-  padding-top: 50px;
-  width: 80%;
-  height: 80vh;
+.LocationWrapper,
+.MapWrapper {
+  margin-top: var(--size-8);
+  position: relative;
+  width: 90%;
+  max-width: calc(100vh * var(--bg-scale));
   left: 50%;
-  max-width: calc(100vh * var(--bg-scale) - 100px);
-  max-height: 50vh;
   transform: translateX(-50%);
+  align-items: right;
+}
+
+.LocationWrapper {
+  direction: rtl;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.LocationWrapper > p {
+  align-items: center;
+  flex-grow: 2;
+}
+
+a {
+  color: var(--pink-7);
+}
+
+.LocationWrapper > p:first-child {
+  flex-grow: 5;
+  text-align: right;
+  float: right;
+  margin-left: 10px;
+}
+
+.LocationImage {
+  font-size: var(--size-10);
+  cursor: pointer;
+}
+
+.MapWrapper {
+  height: 50vh;
+}
+
+.Map {
+  border: 0;
 }
 
 .Background > img {

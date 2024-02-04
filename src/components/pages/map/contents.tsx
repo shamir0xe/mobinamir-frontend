@@ -30,6 +30,7 @@ const contents = {
   },
   txts: {
     weddingWaitingRoom: "txts/waiting-phrase.htm",
+    weddingLocationInvitation: "txts/invitation-location.htm",
     place: "تالار عقد",
     title: "txts/title.htm",
     poet: "txts/poet.htm",

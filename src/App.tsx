@@ -57,18 +57,18 @@ const App: React.FC = () => {
 
     window.addEventListener("resize", onResize);
     window.addEventListener("click", onClicked);
-    const script = document.createElement("script");
-    script.src =
-      "https://cdn.jsdelivr.net/gh/somanchiu/Keyless-Google-Maps-API@v6.6/mapsJavaScriptAPI.js";
-    script.defer = true;
-    script.async = true;
-    document.body.appendChild(script);
-    console.log("script loaded");
+    // const script = document.createElement("script");
+    // script.src =
+    //   "https://cdn.jsdelivr.net/gh/somanchiu/Keyless-Google-Maps-API@v6.6/mapsJavaScriptAPI.js";
+    // script.defer = true;
+    // script.async = true;
+    // document.body.appendChild(script);
+    // console.log("script loaded");
 
     return () => {
       window.removeEventListener("resize", onResize);
       window.removeEventListener("click", onClicked);
-      document.body.removeChild(script);
+      // document.body.removeChild(script);
     };
   }, []);
 

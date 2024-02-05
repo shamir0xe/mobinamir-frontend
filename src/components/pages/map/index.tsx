@@ -1,7 +1,7 @@
 import React, { RefObject, useEffect, useState, useRef } from "react";
 import styles from "./map.module.css";
 import contents from "./contents";
-import { faMapMarker } from "@fortawesome/free-solid-svg-icons";
+import { faMapMarker, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { appendConditionalClass, updateInnerHtmlFromFile } from "helpers/utils";
 
@@ -93,7 +93,7 @@ const Map = (props: MapProps) => {
     updateInnerHtmlFromFile(
       contents.txts.weddingLocationInvitation,
       locationWrapperRef,
-      "0",
+      "0-0",
     );
 
     // enableGoogleMaps();
@@ -106,15 +106,23 @@ const Map = (props: MapProps) => {
       <div className={styles.Background}></div>
       <div className={styles.Container}>
         <div className={styles.LocationWrapper} ref={locationWrapperRef}>
-          <p />
-          <p>
-            <a
-              className={styles.LocationImage}
-              href="https://maps.app.goo.gl/BjEiroR8Ns8N3YqL8"
-            >
-              <FontAwesomeIcon icon={faMapMarker} colorProfile={"red"} />
-            </a>
-          </p>
+          <div>
+            <p />
+          </div>
+          <div>
+            <p>
+              <a
+                className={styles.LocationImage}
+                href="https://maps.app.goo.gl/BjEiroR8Ns8N3YqL8"
+              >
+                <FontAwesomeIcon
+                  className={styles.Icon}
+                  icon={faMapMarkerAlt}
+                  beatFade={true}
+                />
+              </a>
+            </p>
+          </div>
         </div>
         <div className={styles.MapWrapper}>
           <iframe
